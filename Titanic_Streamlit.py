@@ -3,10 +3,6 @@ import pandas as pd
 import numpy as np
 # import seaborn as sns
 
-import matplotlib.pyplot as plt
-from matplotlib import style
-
-
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -116,6 +112,10 @@ st.dataframe(titanic.head())
 
 st.subheader("Null Values Counts :")
 st.dataframe(titanic.isnull().sum())
+
+
+import matplotlib.pyplot as plt
+from matplotlib import style
 
 
 #Drawing a pie chart for number of males and females aboard
