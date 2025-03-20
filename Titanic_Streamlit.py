@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import seaborn as sns
+# import seaborn as sns
 
 import matplotlib.pyplot as plt
 from matplotlib import style
@@ -185,4 +185,4 @@ plt.legend(title='Status', labels=['Died', 'Survived'])
 plt.title('Titanic Survival Count by Gender')
 plt.xlabel('Sex')
 plt.ylabel('Passenger Count')
-st.pyplot(plt)
+# st.pyplot(plt)
