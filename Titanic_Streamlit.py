@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-# import seaborn as sns
+import seaborn as sns
+
+import matplotlib.pyplot as plt
+from matplotlib import style
+
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -13,7 +17,7 @@ st.title("Titanic Data Analysis")
 st.write("This application analyzes titanic data.")
 
 
-titanic = pd.read_csv(r"C:/Users/umesh/Downloads/titanic dataset.csv")
+titanic = pd.read_csv(r"C:/Users/umesh/Downloads/titanic dataset.csv", header = 0, dtype={'Age': np.float64})
 
 
 st.subheader("Titanic Data :")
@@ -114,10 +118,6 @@ st.subheader("Null Values Counts :")
 st.dataframe(titanic.isnull().sum())
 
 
-import matplotlib.pyplot as plt
-from matplotlib import style
-
-
 #Drawing a pie chart for number of males and females aboard
 
 males = (titanic['Sex'] == 1).sum() 
@@ -172,17 +172,17 @@ st.pyplot(plt)
 
 
 # Count plot
-# st.subheader("Titanic Survival Count :")
+st.subheader("Titanic Survival Count :")
 
-# plt.figure(figsize = (6, 8))
-# sns.countplot(titanic, x = "Sex", hue = "Survived")
+plt.figure(figsize = (6, 8))
+sns.countplot(titanic, x = "Sex", hue = "Survived")
 
-# # Set custom x-axis tick labels
-# plt.xticks([0, 1], ['Male', 'Female'])
+# Set custom x-axis tick labels
+plt.xticks([0, 1], ['Male', 'Female'])
 
-# # Change legend labels for Survived
-# plt.legend(title='Status', labels=['Died', 'Survived'])
-# plt.title('Titanic Survival Count by Gender')
-# plt.xlabel('Sex')
-# plt.ylabel('Passenger Count')
-# st.pyplot(plt)
+# Change legend labels for Survived
+plt.legend(title='Status', labels=['Died', 'Survived'])
+plt.title('Titanic Survival Count by Gender')
+plt.xlabel('Sex')
+plt.ylabel('Passenger Count')
+st.pyplot(plt)
