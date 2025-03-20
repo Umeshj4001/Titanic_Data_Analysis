@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-import matplotlib.pyplot as plt
-from matplotlib import style
-
-
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -118,6 +114,11 @@ st.dataframe(titanic.isnull().sum())
 
 
 #Drawing a pie chart for number of males and females aboard
+
+
+import matplotlib.pyplot as plt
+from matplotlib import style
+
 
 males = (titanic['Sex'] == 1).sum() 
 #Summing up all the values of column gender with a 
