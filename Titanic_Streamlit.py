@@ -13,7 +13,7 @@ st.title("Titanic Data Analysis")
 st.write("This application analyzes titanic data.")
 
 
-titanic = pd.read_csv(r"C:/Users/umesh/Downloads/titanic dataset.csv", header = 0, dtype={'Age': np.float64})
+titanic = pd.read_csv(r"C:/Users/umesh/Downloads/titanic dataset.csv")
 
 
 st.subheader("Titanic Data :")
