@@ -172,17 +172,17 @@ st.pyplot(plt)
 
 
 # Count plot
-st.subheader("Titanic Survival Count :")
+# st.subheader("Titanic Survival Count :")
 
-plt.figure(figsize = (6, 8))
-sns.countplot(titanic, x = "Sex", hue = "Survived")
+# plt.figure(figsize = (6, 8))
+# sns.countplot(titanic, x = "Sex", hue = "Survived")
 
-# Set custom x-axis tick labels
-plt.xticks([0, 1], ['Male', 'Female'])
+# # Set custom x-axis tick labels
+# plt.xticks([0, 1], ['Male', 'Female'])
 
-# Change legend labels for Survived
-plt.legend(title='Status', labels=['Died', 'Survived'])
-plt.title('Titanic Survival Count by Gender')
-plt.xlabel('Sex')
-plt.ylabel('Passenger Count')
+# # Change legend labels for Survived
+# plt.legend(title='Status', labels=['Died', 'Survived'])
+# plt.title('Titanic Survival Count by Gender')
+# plt.xlabel('Sex')
+# plt.ylabel('Passenger Count')
 # st.pyplot(plt)
